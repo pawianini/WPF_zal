@@ -1,0 +1,47 @@
+﻿<Window x:Class="Własna_Aplikacja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Własna_Aplikacja"
+        mc:Ignorable="d"
+        Title="Srubka- Sklepy z Częściami" Height="400" Width="525">
+
+    <Window.Resources>
+
+        <DataTemplate DataType="{x:Type local:MagazynyViewModel}">
+
+            <local:MagazynMain/>
+
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:StanMagazynowyViewModel}">
+
+            <local:StanMagazynowy/>
+
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:TowarEdycjaViewModel}">
+
+            <local:TowarEdycja/>
+
+        </DataTemplate>
+
+
+    </Window.Resources>
+
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Left" BorderBrush="Black" BorderThickness="0,0,1,0">
+            <StackPanel x:Name="Nawiguj" DockPanel.Dock="Left" Width="67">
+
+            <Button Content="Powrót" Command="{Binding PowrotCommand}"></Button>
+
+               
+        </StackPanel>
+        </Border>
+        <ContentControl x:Name="Strony" DockPanel.Dock="Right" Content="{Binding SelectedViewModel}"/>
+
+       
+    </DockPanel>
+    
+
+
+</Window>
