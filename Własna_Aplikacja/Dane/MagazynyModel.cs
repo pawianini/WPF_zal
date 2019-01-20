@@ -15,11 +15,11 @@ namespace Własna_Aplikacja
             context = new MagazynyContext();
         }
 
-        public List<Magazyn> Magazyny
+        public IQueryable<Magazyn> Magazyny
         {
             get
             {
-              return new List<Magazyn>(context.Magazyny);
+              return context.Magazyny;
             }
         }
     public void DodajTowar(Magazyn magazyn, Towar towar) {

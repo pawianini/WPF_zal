@@ -87,7 +87,7 @@
             <!-- Department -->
             <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" 
   Orientation="Horizontal">
-                <Label Style="{StaticResource labelStyle}">Wartość Towaru:</Label>
+                <Label Style="{StaticResource labelStyle}">Łączna Wartość Towarów:</Label>
                 <Label Style="{StaticResource labelStyle}" Content="{Binding WartoscStoku}" ContentStringFormat=" {0} zł"></Label>
             </StackPanel>
 

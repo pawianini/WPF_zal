@@ -43,7 +43,7 @@ namespace Własna_Aplikacja
         public MagazynyModel Model { get; set; }
         private void OdswiezMagazyny()
         {
-            this.Magazyny = Model.Magazyny;
+            this.Magazyny = Model.Magazyny.ToList();
         }
 
 

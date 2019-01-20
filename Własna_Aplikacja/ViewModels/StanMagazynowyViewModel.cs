@@ -89,7 +89,7 @@ namespace Własna_Aplikacja
 
         private void OdswiezTowary()
         {
-            Towary = wybranyMagazyn.Towary.ToList();
+            Towary = wybranyMagazyn?.Towary.ToList();
         }
         private void OdswiezStok()
         {
